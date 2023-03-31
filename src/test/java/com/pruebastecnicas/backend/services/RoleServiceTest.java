@@ -5,6 +5,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -44,21 +45,10 @@ public class RoleServiceTest {
     void testGetOne() {
         Role roleUser = new Role(null, "ROLE_USER");
 
-        when(repository.findByRole("ROLE_USER").isPresent());
+        when(repository.findByRole("ROLE_USER")).thenReturn(Optional.of(roleUser));
         
         service.getOneByRole("ROLE_USER");
 
         assertThat(roleUser.getRole()).isEqualTo("ROLE_USER");
     }
-
-    @Test
-    void testSave() {
-
-    }
-
-    @Test
-    void testDelete() {
-
-    }    
-
 }

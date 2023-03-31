@@ -15,7 +15,7 @@ public class UserTest {
 
     @Test
     void createUserWhithArguments() {
-        User newUser = new User(null, "Usuario 2", "password 02", null);
+        User newUser = new User(null, "Usuario", "Usuario 2", "password 02", null);
         assertEquals("Usuario 2", newUser.getUserName());
     }
 }
