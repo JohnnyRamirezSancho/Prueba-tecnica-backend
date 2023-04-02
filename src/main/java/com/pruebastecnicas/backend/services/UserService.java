@@ -1,14 +1,13 @@
-package com.events.upcoming.services;
+package com.pruebastecnicas.backend.services;
 
 import java.util.List;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-// import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.events.upcoming.models.User;
-import com.events.upcoming.repositories.UserRepository;
+import com.pruebastecnicas.backend.models.User;
+import com.pruebastecnicas.backend.repositories.UserRepository;
 
 @Service
 public class UserService {
@@ -26,7 +25,7 @@ public class UserService {
         return repository.save(user);
     }
 
-    public User storeEvent(User user) {
+    public User storeCourse(User user) {
         return repository.save(user);
     }
 

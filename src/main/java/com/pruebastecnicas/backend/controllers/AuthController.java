@@ -1,4 +1,4 @@
-package com.events.upcoming.controllers;
+package com.pruebastecnicas.backend.controllers;
 
 import java.util.HashMap;
 import java.util.Map;

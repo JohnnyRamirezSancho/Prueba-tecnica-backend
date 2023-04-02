@@ -22,7 +22,6 @@ public class SecurityUser implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        //Set<Role> roles = user.getRoles();
         Collection<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
 
         for (Role role : user.getRoles()) {
@@ -30,7 +29,6 @@ public class SecurityUser implements UserDetails {
             authorities.add(authority);
         }
         return authorities;
-
     }
 
     @Override
@@ -56,7 +54,6 @@ public class SecurityUser implements UserDetails {
     @Override
     public boolean isCredentialsNonExpired() {
         return true;
-
     }
 
     @Override
@@ -68,5 +65,4 @@ public class SecurityUser implements UserDetails {
     public String toString() {
         return "SecurityUser [user=" + user.toString() + "]";
     }
-
 }
